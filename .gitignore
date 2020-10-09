@@ -1,0 +1,14 @@
+# System
+.DS_Store
+
+# Environment
+*.crt
+*.key
+
+# Build/run artifacts
+.coverage
+.env
+.tern-port
+/coverage
+/logs
+/node_modules
