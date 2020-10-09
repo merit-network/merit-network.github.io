@@ -9,6 +9,8 @@
 .coverage
 .env
 .tern-port
+/.cache
 /coverage
 /logs
 /node_modules
+/public

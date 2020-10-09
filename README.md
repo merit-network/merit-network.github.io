@@ -8,6 +8,9 @@ Clone/fork the repo, then:
 # Change into local copy
 cd merit-network.github.io
 
+# Install dependencies
+npm install
+
 # Run development
 npm run develop
 ```
