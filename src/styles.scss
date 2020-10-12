@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+
+// Colors (Brand)
+$c-black        : #1A1523;
+$c-blue         : #304C58;
+$c-grayDark     : #5E666A;
+$c-grayLight    : #EBEBEB;
+$c-green        : #8CC63F;
+$c-red          : #EF4136;
+$c-teal         : #00BABC;
+
+// Colors (Additional)
+$c-gray1        : $c-grayDark;
+$c-gray2        : #82898C;
+$c-gray3        : #A6ACAE;
+$c-gray4        : #CACFD1;
+$c-gray5        : #EEF2F3;
+$c-gray6        : #F8F9FA;
+$c-orange       : #FFAA33;
+$c-white        : #FFFFFF;
+$c-yellow       : #F9EA5C;
+
+// Colors (sat/bright shifts)
+$c-blue3        : $c-blue;
+$c-blue4        : #49757F;
+$c-blue5        : #568B99;
+$c-blue6        : #E4F0EE;
+
+// Gradients (1 -> 2)
+$g-angle        : -45deg;
+$g-black-1      : #0d0916;
+$g-black-2      : #434343;
+$g-blue-1       : #0f2027;
+$g-blue-2       : #2c5364;
+$g-grayDark-1   : #5e666a;
+$g-grayDark-2   : #859398;
+$g-grayLight-1  : #abbaab;
+$g-grayLight-2  : #eef2f3;
+$g-green-1      : #56ab2f;
+$g-green-2      : #a8e063;
+$g-orange-1     : #cf5511;
+$g-orange-2     : #ff9500;
+$g-red-1        : #ff4b2b;
+$g-red-2        : #ff416c;
+$g-teal-1       : #00a0ba;
+$g-teal-2       : #1dd8d3;
+$g-yellow-1     : #EBE236;
+$g-yellow-2     : #FFF0A3;
+
+
+
+// Bulma (Core/All)
+@import "~bulma/bulma.sass";
+
+
+// Customizations
+body {
+  border-top: 3px solid $c-teal;
+}
+
+.navbar-brand {
+  .navbar-item {
+    svg {
+      fill: $c-blue;
+      height: 30px;
+      margin-bottom: 3px;
+      width: 93px;
+    }
+
+    &:hover,
+    &:hover > * {
+      background-color: transparent !important;
+    }
+
+    &:hover svg {
+      fill: $c-teal;
+    }
+  }
+}

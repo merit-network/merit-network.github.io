@@ -5,3 +5,14 @@ description: "Hello World"
 ---
 
 First! Hey, let's put stuff here soon, eh?
+
+
+```bash
+# do thing
+thing()
+```
+
+```python
+def foo(bar):
+    print(bar)
+```
