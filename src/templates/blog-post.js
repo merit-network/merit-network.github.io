@@ -22,13 +22,27 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div className="hero is-info">
+            <div className="hero-body">
+              <div className="container has-text-centered">
+                <h1 className="title" itemProp="headline">{post.frontmatter.title}</h1>
+                <h2 className="subtitle">{post.frontmatter.date}</h2>
+              </div>
+            </div>
+          </div>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section className="section">
+          <div className="container">
+            <div class="columns is-centered">
+              <div class="column is-7">
+                <div
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  itemProp="articleBody"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
         <hr />
         <footer>
           <Bio />

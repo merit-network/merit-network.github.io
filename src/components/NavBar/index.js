@@ -54,6 +54,9 @@ export default class NavBar extends React.Component {
                 <a className="button is-light is-small" href="https://github.com/merit-network">
                   GitHub
                 </a>
+                <a className="button is-primary is-small" href="https://www.merit.edu">
+                  Main Site
+                </a>
               </div>
             </div>
           </div>

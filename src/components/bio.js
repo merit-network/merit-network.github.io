@@ -40,27 +40,36 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className="bio">
-      {avatar && (
-        <Image
-          fixed={avatar}
-          alt={author?.name || ``}
-          className="bio-avatar"
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
-        />
-      )}
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            Follow us on Twitter
-          </a>
-        </p>
-      )}
-    </div>
+    <section className="section">
+      <div className="container">
+        <div className="columns is-centered">
+          {avatar && (
+            <div className="column is-narrow">
+              <Image
+                fixed={avatar}
+                alt={author?.name || ``}
+                className="bio-avatar"
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
+            </div>
+          )}
+
+          {author?.name && (
+            <div className="column is-6">
+              <p>
+                Written by <strong>{author.name}</strong> {author?.summary || null}
+                {` `}
+                <a href={`https://twitter.com/${social?.twitter || ``}`}>
+                  Follow us on Twitter
+                </a>
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
   )
 }
 
