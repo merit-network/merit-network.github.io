@@ -5,9 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import Image from 'gatsby-image'
+import React from 'react'
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useStaticQuery, graphql } from 'gatsby'
+
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -26,6 +32,9 @@ const Bio = () => {
             summary
           }
           social {
+            facebook
+            github
+            linkedin
             twitter
           }
         }
@@ -56,17 +65,39 @@ const Bio = () => {
             </div>
           )}
 
-          {author?.name && (
-            <div className="column is-6">
+          <div className="column is-6">
+            {author?.name && (
               <p>
-                Written by <strong>{author.name}</strong> {author?.summary || null}
-                {` `}
-                <a href={`https://twitter.com/${social?.twitter || ``}`}>
-                  Follow us on Twitter
-                </a>
+                <strong>{author.name}</strong> {author?.summary || null}
               </p>
-            </div>
-          )}
+            )}
+
+            <p>
+              {social.twitter &&
+                <a href={`https://twitter.com/${social.twitter}`}>
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              }
+              {` `}
+              {social.facebook &&
+                <a href={`https://facebook.com/${social.facebook}`}>
+                  <FontAwesomeIcon icon={faFacebookSquare} />
+                </a>
+              }
+              {` `}
+              {social.linkedin &&
+                <a href={`https://linkedin.com/company/${social.linkedin}`}>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              }
+              {` `}
+              {social.github &&
+                <a href={`https://github.com/${social.github}`}>
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              }
+            </p>
+          </div>
         </div>
       </div>
     </section>

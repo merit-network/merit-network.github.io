@@ -1,4 +1,7 @@
 import React from "react"
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "gatsby"
 
 import Logo from '../../../content/assets/logo.svg';
@@ -52,6 +55,7 @@ export default class NavBar extends React.Component {
             <div className="navbar-item">
               <div className="buttons">
                 <a className="button is-light is-small" href="https://github.com/merit-network">
+                  <FontAwesomeIcon icon={faGithub} className="mr-1" />
                   GitHub
                 </a>
                 <a className="button is-primary is-small" href="https://www.merit.edu">

@@ -82,6 +82,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-fontawesome-css`,
     /*
     {
       // https://www.gatsbyjs.com/plugins/gatsby-source-graphql/
