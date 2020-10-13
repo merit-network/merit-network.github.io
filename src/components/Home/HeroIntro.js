@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export default function HomeHero() {
+export default function HeroProjects() {
   /*
   const inlineStyles = {
     backgroundColor: 'transparent',
@@ -11,13 +11,13 @@ export default function HomeHero() {
   */
 
   return (
-    <section className="hero is-primary is-medium is-centered">
+    <section className="hero is-info is-medium">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title">
+          <h1 className="title is-2">
             Community + Open Source + Technology
           </h1>
-          <h2 className="subtitle">
+          <h2 className="subtitle is-4">
             Our commitment to paying it forward.
           </h2>
         </div>

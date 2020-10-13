@@ -49,6 +49,17 @@ $g-yellow-1     : #EBE236;
 $g-yellow-2     : #FFF0A3;
 
 
+// Bulma Config
+$danger: $c-red;
+$dark: $c-grayDark;
+$info: $c-blue;
+$link-hover: $c-teal;
+$link: $c-blue;
+$primary: $c-teal;
+$success: $c-green;
+$text: $c-black;
+$warning: $c-orange;
+
 
 // Bulma (Core/All)
 @import "~bulma/bulma.sass";

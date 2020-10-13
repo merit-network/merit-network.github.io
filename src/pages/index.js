@@ -2,8 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import HeroIntro from "../components/Home/HeroIntro"
+import HeroProjects from "../components/Home/HeroProjects"
 import Layout from "../components/layout"
-import HomeHero from "../components/HomeHero"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
@@ -27,7 +28,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
-      <HomeHero />
+      <HeroIntro />
+      <HeroProjects />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
