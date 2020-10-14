@@ -62,7 +62,7 @@ const About = () => {
           )}
 
           <div className="column is-7">
-            <h4 class="title is-5 mb-2">
+            <h4 className="title is-5 mb-2">
               <a href={author.website}>
                 <strong>{author.name}</strong>
               </a>
