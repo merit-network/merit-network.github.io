@@ -7,6 +7,7 @@ const HeroProjects = () => {
       <div className="hero-body">
         <div className="container has-text-centered">
           <div className="columns">
+
             <div className="column">
               <h2 className="title is-3">Explore Projects</h2>
               <div className="field">
@@ -17,6 +18,7 @@ const HeroProjects = () => {
                 </div>
               </div>
             </div>
+
             <div className="column">
               <h2 className="title is-3">Join Our Team</h2>
               <div className="field">
@@ -27,6 +29,7 @@ const HeroProjects = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

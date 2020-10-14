@@ -2,10 +2,12 @@ import Image from 'gatsby-image'
 import React from 'react'
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useStaticQuery, graphql } from 'gatsby'
+
+import ButtonIcon from 'Components/ButtonIcon'
 
 
 const About = () => {
@@ -13,7 +15,7 @@ const About = () => {
     query AboutQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
+          fixed(width: 76, height: 76, quality: 95) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -23,6 +25,7 @@ const About = () => {
           author {
             name
             summary
+            website
           }
           social {
             facebook
@@ -35,63 +38,66 @@ const About = () => {
     }
   `)
 
-  // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
-
   const avatar = data?.avatar?.childImageSharp?.fixed
+  const social = data.site.siteMetadata?.social
 
   return (
     <section className="section">
       <div className="container">
         <div className="columns is-centered">
           {avatar && (
-            <div className="column is-narrow">
-              <Image
-                fixed={avatar}
-                alt={author?.name || ``}
-                className="about-avatar"
-                imgStyle={{
-                  borderRadius: `50%`,
-                }}
-              />
+            <div className="column is-narrow pt-4 pr-4">
+              <a href={author.website}>
+                <Image
+                  alt={author?.name || ``}
+                  className="about-avatar"
+                  fixed={avatar}
+                  imgStyle={{
+                    borderRadius: `50%`,
+                  }}
+                />
+              </a>
             </div>
           )}
 
-          <div className="column is-6">
-            {author?.name && (
-              <p>
-                <strong>{author.name}</strong> {author?.summary || null}
-              </p>
-            )}
+          <div className="column is-7">
+            <h4 class="title is-5 mb-2">
+              <a href={author.website}>
+                <strong>{author.name}</strong>
+              </a>
+            </h4>
 
-            <p>
-              {social.twitter &&
-                <a href={`https://twitter.com/${social.twitter}`}>
-                  <FontAwesomeIcon icon={faTwitter} />
-                </a>
-              }
-              {` `}
-              {social.facebook &&
-                <a href={`https://facebook.com/${social.facebook}`}>
-                  <FontAwesomeIcon icon={faFacebookSquare} />
-                </a>
-              }
-              {` `}
-              {social.linkedin &&
-                <a href={`https://linkedin.com/company/${social.linkedin}`}>
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-              }
-              {` `}
-              {social.github &&
-                <a href={`https://github.com/${social.github}`}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              }
-            </p>
+            <p>{author.summary}</p>
+
+            <hr className="mt-4 mb-3" />
+            <div className="level">
+              <div className="level-left">
+                <div className="level-item">
+                  Connect with us:
+                </div>
+                <div className="level-item">
+                  {author?.website &&
+                    <ButtonIcon icon={faGlobeAmericas} href={author.website} />
+                  }
+                  {social.twitter &&
+                    <ButtonIcon icon={faTwitter} href={`https://twitter.com/${social.twitter}`} />
+                  }
+                  {social.facebook &&
+                    <ButtonIcon icon={faFacebookSquare} href={`https://facebook.com/${social.facebook}`} />
+                  }
+                  {social.linkedin &&
+                    <ButtonIcon icon={faLinkedin} href={`https://linkedin.com/company/${social.linkedin}`} />
+                  }
+                  {social.github &&
+                    <ButtonIcon icon={faGithub} href={`https://github.com/${social.github}`} />
+                  }
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   )

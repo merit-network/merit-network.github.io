@@ -7,6 +7,7 @@ module.exports = {
     author: {
       name: `Merit Network, Inc.`,
       summary: `A nonprofit member-governed organization providing high-performance computer networking and related services to educational, government, health care, and nonprofit organizations, primarily in Michigan.`,
+      website: `https://www.merit.edu`
     },
     description: `Open source and technology from Merit Network, Inc.`,
     siteUrl: `https://merit-network.github.io/`,
