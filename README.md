@@ -1,6 +1,8 @@
 # Merit Network, Inc. Open Source and Technology
 
-# Quick Start
+Open source and technology site for Merit Network, Inc.
+
+# Development
 
 Clone/fork the repo, then:
 
@@ -29,6 +31,14 @@ Deploys are handled automatically by GitHub Actions whenever a branch or PR is m
 # Contributing
 
 We accept community contributions! For details, please see [CONTRIBUTING.md](CONTRIBUTING.md)
+
+# Acknowledgements
+
+* [Bulma](https://bulma.io/)
+* [FontAwesome](https://fontawesome.com/)
+* [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog)
+* [Gatsby](https://www.gatsbyjs.com/)
+* [Source](https://github.com/merit-network/merit-network.github.io)
 
 # License
 
