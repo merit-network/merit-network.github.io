@@ -1,9 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import About from "../components/About"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import About from 'Components/About'
+import Layout from 'Components/Layout'
+import SEO from 'Components/SEO'
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -77,6 +78,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
     </Layout>
   )
 }
+
 
 export default BlogPostTemplate
 

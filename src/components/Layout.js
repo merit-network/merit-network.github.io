@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import Footer from './Footer'
-import NavBar from './NavBar'
+import Footer from 'Components/Footer'
+import NavBar from 'Components/NavBar'
 
 
 const Layout = ({ location, title, children }) => {

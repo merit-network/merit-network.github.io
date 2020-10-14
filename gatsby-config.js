@@ -1,3 +1,6 @@
+const path = require('path')
+
+
 module.exports = {
   siteMetadata: {
     title: `Merit Network, Inc. Open Source and Technology`,
@@ -137,20 +140,17 @@ module.exports = {
       }
     },
     `gatsby-plugin-fontawesome-css`,
-    /*
     {
-      // https://www.gatsbyjs.com/plugins/gatsby-source-graphql/
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-plugin-alias-imports`,
       options: {
-        typeName: "GitHub",
-        fieldName: "github",
-        url: "https://api.github.com/graphql",
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        alias: {
+          'Components': path.resolve(__dirname, 'src/components'),
+          'Pages': path.resolve(__dirname, 'src/pages'),
+          'Templates': path.resolve(__dirname, 'src/templates'),
         },
-      },
-    },
-    */
+        extensions: ['js']
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

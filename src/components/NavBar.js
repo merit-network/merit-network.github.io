@@ -3,7 +3,8 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import Logo from '../../../content/assets/logo.svg';
+// Not great, but semi-official SVG method
+import Logo from '../../content/assets/logo.svg';
 
 
 const NavBar = () => {
@@ -61,12 +62,9 @@ const NavBar = () => {
               {siteRepo && (
                 <a className="button is-light is-small" href={siteRepo}>
                   <FontAwesomeIcon icon={faGithub} className="mr-1" />
-                  Fork on GitHub
+                  View on GitHub
                 </a>
               )}
-              <a className="button is-primary is-small" href="https://www.merit.edu">
-                Main Site
-              </a>
             </div>
           </div>
         </div>

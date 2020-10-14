@@ -1,11 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import About from "../components/About"
-import HeroIntro from "../components/Home/HeroIntro"
-import HeroProjects from "../components/Home/HeroProjects"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import About from 'Components/About'
+import HeroIntro from 'Components/HeroIntro'
+import HeroProjects from 'Components/HeroProjects'
+import Layout from 'Components/Layout'
+import SEO from 'Components/SEO'
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -66,6 +67,7 @@ const BlogIndex = ({ data, location }) => {
     </Layout>
   )
 }
+
 
 export default BlogIndex
 
