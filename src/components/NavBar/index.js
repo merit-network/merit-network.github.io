@@ -1,8 +1,7 @@
-import React from "react"
-import { useRef } from 'react';
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import React, { useRef } from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from "gatsby"
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import Logo from '../../../content/assets/logo.svg';
 
@@ -16,6 +15,18 @@ const NavBar = () => {
     burger.current.classList.toggle('is-active');
     menu.current.classList.toggle('is-active');
   };
+
+  const data = useStaticQuery(graphql`
+    query NavBarQuery {
+      site {
+        siteMetadata {
+          siteRepo
+        }
+      }
+    }
+  `);
+
+  const siteRepo = data.site.siteMetadata?.siteRepo
 
   return (
     <nav className="navbar is-white is-spaced" role="navigation" aria-label="main navigation">
@@ -47,10 +58,12 @@ const NavBar = () => {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-light is-small" href="https://github.com/merit-network">
-                <FontAwesomeIcon icon={faGithub} className="mr-1" />
-                GitHub
-              </a>
+              {siteRepo && (
+                <a className="button is-light is-small" href={siteRepo}>
+                  <FontAwesomeIcon icon={faGithub} className="mr-1" />
+                  Fork on GitHub
+                </a>
+              )}
               <a className="button is-primary is-small" href="https://www.merit.edu">
                 Main Site
               </a>
