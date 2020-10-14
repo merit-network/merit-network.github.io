@@ -1,4 +1,4 @@
-# Merit Network, Inc. Open Source and Technology Blog
+# Merit Network, Inc. Open Source and Technology
 
 # Quick Start
 
@@ -13,6 +13,9 @@ npm install
 
 # Run development
 npm run develop
+
+# (OPTIONAL) Clean local; helps if develop isn't "working"
+npm run clean
 ```
 
 The site is now running at `http://localhost:8000`! Make changes locally, then push to your branch/fork and [open a PR](https://github.com/merit-network/merit-network.github.io/compare).

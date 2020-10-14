@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Merit Network, Inc. Open Source and Technology Blog`,
+    title: `Merit Network, Inc. Open Source and Technology`,
     author: {
       name: `Merit Network, Inc.`,
       summary: `A nonprofit member-governed organization providing high-performance computer networking and related services to educational, government, health care, and nonprofit organizations, primarily in Michigan.`,
     },
-    description: `Open source and technology blog from Merit Network, Inc.`,
+    description: `Open source and technology from Merit Network, Inc.`,
     siteUrl: `https://merit-network.github.io/`,
     social: {
       facebook: `meritnetwork`,
@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Merit Network, Inc. Open Source and Technology Blog`,
-        short_name: `TechBlog`,
+        name: `Merit Network, Inc. Open Source and Technology`,
+        short_name: `Merit Open Source and Technology`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#00babc`,
