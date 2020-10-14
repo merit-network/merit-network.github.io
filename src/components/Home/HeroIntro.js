@@ -1,15 +1,7 @@
 import React from "react"
 
 
-export default function HeroProjects() {
-  /*
-  const inlineStyles = {
-    backgroundColor: 'transparent',
-    backgroundImage: 'url("https://www.merit.edu/wp-content/uploads/2018/01/about_header.png")',
-    backgroundSize: 'cover',
-  };
-  */
-
+const HeroProjects = () => {
   return (
     <section className="hero is-info is-medium">
       <div className="hero-body">
@@ -25,3 +17,6 @@ export default function HeroProjects() {
     </section>
   )
 }
+
+
+export default HeroProjects

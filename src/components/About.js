@@ -1,5 +1,5 @@
 /**
- * Bio component that queries for data
+ * About component that queries for data
  * with Gatsby's useStaticQuery component
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
@@ -15,9 +15,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useStaticQuery, graphql } from 'gatsby'
 
 
-const Bio = () => {
+const About = () => {
   const data = useStaticQuery(graphql`
-    query BioQuery {
+    query AboutQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
           fixed(width: 50, height: 50, quality: 95) {
@@ -57,7 +57,7 @@ const Bio = () => {
               <Image
                 fixed={avatar}
                 alt={author?.name || ``}
-                className="bio-avatar"
+                className="about-avatar"
                 imgStyle={{
                   borderRadius: `50%`,
                 }}
@@ -104,4 +104,4 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default About

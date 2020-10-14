@@ -7,6 +7,7 @@ module.exports = {
     },
     description: `Open source and technology from Merit Network, Inc.`,
     siteUrl: `https://merit-network.github.io/`,
+    siteRepo: `https://github.com/merit-network/merit-network.github.io`,
     social: {
       facebook: `meritnetwork`,
       github: `merit-network`,

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import About from "../components/About"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -45,7 +45,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </section>
         <hr />
         <footer>
-          <Bio />
+          <About />
         </footer>
       </article>
       <nav className="blog-post-nav">

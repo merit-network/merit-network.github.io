@@ -17,4 +17,5 @@ const Layout = ({ location, title, children }) => {
   )
 }
 
+
 export default Layout
