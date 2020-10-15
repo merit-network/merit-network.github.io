@@ -23,6 +23,7 @@ const About = () => {
       site {
         siteMetadata {
           author {
+            company
             name
             summary
             website
@@ -46,58 +47,56 @@ const About = () => {
     <section className="section">
       <div className="container">
         <div className="columns is-centered">
-          {avatar && (
-            <div className="column is-narrow pt-4 pr-4">
-              <a href={author.website}>
-                <Image
-                  alt={author?.name || ``}
-                  className="about-avatar"
-                  fixed={avatar}
-                  imgStyle={{
-                    borderRadius: `50%`,
-                  }}
-                />
-              </a>
-            </div>
-          )}
+          <div className="column is-10">
 
-          <div className="column is-7">
-            <h4 className="title is-5 mb-2">
-              <a href={author.website}>
-                <strong>{author.name}</strong>
-              </a>
-            </h4>
-
-            <p>{author.summary}</p>
-
-            <hr className="mt-4 mb-3" />
-            <div className="level">
-              <div className="level-left">
-                <div className="level-item">
-                  Connect with us:
-                </div>
-                <div className="level-item">
-                  {author?.website &&
-                    <ButtonIcon icon={faGlobeAmericas} href={author.website} />
-                  }
-                  {social.twitter &&
-                    <ButtonIcon icon={faTwitter} href={`https://twitter.com/${social.twitter}`} />
-                  }
-                  {social.facebook &&
-                    <ButtonIcon icon={faFacebookSquare} href={`https://facebook.com/${social.facebook}`} />
-                  }
-                  {social.linkedin &&
-                    <ButtonIcon icon={faLinkedin} href={`https://linkedin.com/company/${social.linkedin}`} />
-                  }
-                  {social.github &&
-                    <ButtonIcon icon={faGithub} href={`https://github.com/${social.github}`} />
-                  }
+            <div className="columns is-centered">
+              <div className="column is-narrow pt-4 pr-4">
+                {avatar && (
+                  <a href={author.website}>
+                    <Image
+                      alt={author?.company || ``}
+                      fixed={avatar}
+                    />
+                  </a>
+                )}
+              </div>
+              <div className="column">
+                <h4 className="title is-5 mb-2">
+                  <a href={author.website}>
+                    <strong>{author.company}</strong>
+                  </a>
+                </h4>
+                <p>{author.summary}</p>
+                <hr className="mt-4 mb-3" />
+                <div className="level">
+                  <div className="level-left">
+                    <div className="level-item">
+                      Connect with us:
+                    </div>
+                    <div className="level-item">
+                      {author?.website &&
+                        <ButtonIcon icon={faGlobeAmericas} href={author.website} />
+                      }
+                      {social.twitter &&
+                        <ButtonIcon icon={faTwitter} href={`https://twitter.com/${social.twitter}`} />
+                      }
+                      {social.facebook &&
+                        <ButtonIcon icon={faFacebookSquare} href={`https://facebook.com/${social.facebook}`} />
+                      }
+                      {social.linkedin &&
+                        <ButtonIcon icon={faLinkedin} href={`https://linkedin.com/company/${social.linkedin}`} />
+                      }
+                      {social.github &&
+                        <ButtonIcon icon={faGithub} href={`https://github.com/${social.github}`} />
+                      }
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-
       </div>
     </section>
   )

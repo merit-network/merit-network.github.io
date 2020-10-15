@@ -5,7 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `Merit Network, Inc. Open Source and Technology`,
     author: {
-      name: `Merit Network, Inc.`,
+      company: `Merit Network, Inc.`,
+      name: `Merit Open Source and Technology`,
       summary: `A nonprofit member-governed organization providing high-performance computer networking and related services to educational, government, health care, and nonprofit organizations, primarily in Michigan.`,
       website: `https://www.merit.edu`
     },
