@@ -75,6 +75,8 @@ const PostFooter = () => {
 
 
 const PostsNav = ({ next, previous }) => {
+  if (!next && !previous) return (null)
+
   return (
     <>
       <div className="columns is-centered">
