@@ -1,6 +1,7 @@
 ---
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello and welcome to our new open source and technology site!"
+featuredImage: markus-spiske-70Rir5vB96U-unsplash.jpg
 tags: ["first", "hello_world"]
 title: Hello World
 ---
