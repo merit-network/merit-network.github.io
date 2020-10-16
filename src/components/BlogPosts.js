@@ -1,3 +1,4 @@
+import Img from 'gatsby-image'
 import React from 'react'
 import { Link } from 'gatsby'
 
@@ -13,11 +14,11 @@ const PostsEmpty = () => {
 }
 
 
-const PostsList = ({ posts }) => {
+const PostsList = ({ author, posts }) => {
   return (
     <>
       {posts.map(post => {
-        const title = post.frontmatter.title || post.fields.slug
+        const featuredImgFixed = post.frontmatter?.featuredImage?.childImageSharp?.fixed
 
         return (
           <article
@@ -25,27 +26,40 @@ const PostsList = ({ posts }) => {
             itemType="http://schema.org/Article"
             key={post.fields.slug}
           >
-            <header>
-              <div className="tags">
-                {post.frontmatter.tags.map((tag, index) => {
-                  return <span className="tag" key={index}>{tag}</span>
-                })}
+            <div className="columns">
+              <div className="column">
+                <h1 className="title is-2 mb-4 has-text-black" itemProp="headline">
+                  <Link to={post.fields.slug} itemProp="url">
+                    {post.frontmatter.title}
+                  </Link>
+                </h1>
+                <h2 className="subtitle is-5 mb-4 mt-1 has-text-dark" itemProp="description">
+                  {post.frontmatter.description || post.excerpt}
+                </h2>
+                <p className="is-size-6">
+                  <em>
+                    {author &&
+                      <>
+                        By <Link to="/">{author}</Link> on {` `}
+                      </>
+                    }
+                    {post.frontmatter.date}
+                  </em>
+                </p>
               </div>
-              <h1 className="title">
-                <Link to={post.fields.slug} itemProp="url">
-                  <span itemProp="headline">{title}</span>
-                </Link>
-              </h1>
-              <h2 className="subtitle">
-                {post.frontmatter.date}
-              </h2>
-            </header>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: post.frontmatter.description || post.excerpt,
-              }}
-              itemProp="description"
-            />
+              {featuredImgFixed && (
+                <div className="column is-narrow">
+                  <Link to={post.fields.slug} itemProp="url">
+                    <figure className="image block">
+                      <Img fixed={featuredImgFixed} />
+                    </figure>
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div className="mt-6 mb-6">
+              <hr />
+            </div>
           </article>
         )
       })}
@@ -54,20 +68,20 @@ const PostsList = ({ posts }) => {
 }
 
 
-const BlogPosts = ({ posts }) => {
+const BlogPosts = ({ author, posts }) => {
   let content;
 
   if (posts.length === 0) {
     content = <PostsEmpty />
   } else {
-    content = <PostsList posts={posts} />
+    content = <PostsList author={author} posts={posts} />
   }
 
   return (
     <section className="section">
       <div className="container">
         <div className="columns is-centered">
-          <div className="column is-8">
+          <div className="column is-8 mt-6">
             {content}
           </div>
         </div>

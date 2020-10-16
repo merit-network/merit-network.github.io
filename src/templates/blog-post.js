@@ -13,8 +13,12 @@ const PostHeader = ({ author, post }) => {
     <div className="columns is-centered">
       <div className="column is-7">
         <header className="block mb-5">
-          <h1 className="title is-1 mb-4 has-text-black" itemProp="headline">{post.frontmatter.title}</h1>
-          <h2 className="subtitle is-4 mb-4 mt-1 has-text-dark">{post.frontmatter.description || post.excerpt}</h2>
+          <h1 className="title is-1 mb-4 has-text-black" itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
+          <h2 className="subtitle is-4 mb-4 mt-1 has-text-dark" itemProp="description">
+            {post.frontmatter.description || post.excerpt}
+          </h2>
           <p className="is-size-6"><em>
             {author &&
               <>

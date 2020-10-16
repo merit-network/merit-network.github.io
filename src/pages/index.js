@@ -10,15 +10,16 @@ import SEO from 'Components/SEO'
 
 
 const IndexPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const author = data.site.siteMetadata?.author?.name
   const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <HeroIntro />
       <HeroProjects />
-      <BlogPosts posts={posts} />
+      <BlogPosts author={author} posts={posts} />
       <About />
     </Layout>
   )
@@ -31,6 +32,9 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        author {
+          name
+        }
         title
       }
     }
@@ -43,6 +47,13 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           description
+          featuredImage {
+            childImageSharp {
+              fixed(height: 150, width: 150) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
           tags
           title
         }
