@@ -34,16 +34,34 @@ const PostHeader = ({ author, post }) => {
 }
 
 const PostFeaturedImage = ({ post }) => {
-  const featuredImgFluid = post.frontmatter?.featuredImage?.childImageSharp?.fluid
+  const featuredImage = post.frontmatter?.featuredImage?.childImageSharp?.fluid
+  const featuredImageCredit = post.frontmatter?.featuredImageCredit
+  const featuredImageLink = post.frontmatter?.featuredImageLink
 
-  if (!featuredImgFluid) return (null);
+  if (!featuredImage) return (null);
+
+  let featuredImageByline
+  if (featuredImageCredit) {
+    if (featuredImageLink) {
+      featuredImageByline = <a href="{featuredImageLink}">{featuredImageCredit}</a>
+    } else {
+      featuredImageByline = featuredImageCredit
+    }
+  }
 
   return (
-    <div className="columns is-centered mb-5">
+    <div className="columns is-centered mb-6">
       <div className="column is-10">
         <figure className="image block">
-          <Img fluid={featuredImgFluid} />
+          <Img fluid={featuredImage} />
         </figure>
+        {featuredImageByline && (
+          <p className="has-text-grey is-size-7 mt-0">
+            <em>
+              Photo by {featuredImageByline}
+            </em>
+          </p>
+        )}
       </div>
     </div>
   )
@@ -181,8 +199,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         description
-        title
-        tags
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -190,6 +206,10 @@ export const pageQuery = graphql`
             }
           }
         }
+        featuredImageCredit
+        featuredImageLink
+        tags
+        title
       }
     }
   }
