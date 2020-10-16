@@ -31,7 +31,7 @@ As this site grows we hope to share what we know/learn working with things like:
 
 # This entire site is open source
 
-As a start, [this entire site is open source](https://github.com/merit-network/merit-network.github.io) and MIT-licensed! It was built using [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) along with [Bulma](https://www.gatsbyjs.com/) and [Font Awesome](https://fontawesome.com/) and uses GitHub Actions for automatic builds and GitHub Pages for hosting.
+As a start, [this entire site is open source](https://github.com/merit-network/merit-network.github.io) and MIT-licensed! It was built using [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) along with [Bulma](https://bulma.io/) and [Font Awesome](https://fontawesome.com/) and uses GitHub Actions for automatic builds and GitHub Pages for hosting.
 
 If you find something we should change or would like to contribute please [open an issue](https://github.com/merit-network/merit-network.github.io/issues) or [submit a pull request](https://github.com/merit-network/merit-network.github.io/pulls).
 
