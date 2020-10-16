@@ -70,6 +70,7 @@ body {
   border-top: 3px solid $c-teal;
 }
 
+
 .navbar-brand {
   .navbar-item {
     svg {
@@ -87,5 +88,21 @@ body {
     &:hover svg {
       fill: $c-teal;
     }
+  }
+}
+
+
+.posts-list {
+  column-gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2em;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

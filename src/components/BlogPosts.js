@@ -16,27 +16,37 @@ const PostsEmpty = () => {
 
 const PostsList = ({ author, posts }) => {
   return (
-    <>
-      {posts.map(post => {
-        const featuredImgFixed = post.frontmatter?.featuredImage?.childImageSharp?.fixed
+    <div className="posts-list">
+        {posts.map((post, index) => {
+          const featuredImgFluid= post.frontmatter?.featuredImage?.childImageSharp?.fluid
 
-        return (
-          <article
-            itemScope
-            itemType="http://schema.org/Article"
-            key={post.fields.slug}
-          >
-            <div className="columns">
-              <div className="column">
-                <h1 className="title is-2 mb-4 has-text-black" itemProp="headline">
+          return (
+            <article
+              className="card post"
+              itemScope
+              itemType="http://schema.org/Article"
+              key={post.fields.slug}
+            >
+              {featuredImgFluid && (
+                <div className="card-image">
+                  <Link to={post.fields.slug} itemProp="url">
+                    <figure className="image">
+                      <Img fluid={featuredImgFluid} />
+                    </figure>
+                  </Link>
+                </div>
+              )}
+
+              <div className="card-content">
+                <h1 className="title is-3 mb-3 has-text-black" itemProp="headline">
                   <Link to={post.fields.slug} itemProp="url">
                     {post.frontmatter.title}
                   </Link>
                 </h1>
-                <h2 className="subtitle is-5 mb-4 mt-1 has-text-dark" itemProp="description">
+                <h2 className="subtitle is-6 mb-3 mt-0 has-text-dark" itemProp="description">
                   {post.frontmatter.description || post.excerpt}
                 </h2>
-                <p className="is-size-6">
+                <p className="is-size-7">
                   <em>
                     {author &&
                       <>
@@ -47,23 +57,10 @@ const PostsList = ({ author, posts }) => {
                   </em>
                 </p>
               </div>
-              {featuredImgFixed && (
-                <div className="column is-narrow">
-                  <Link to={post.fields.slug} itemProp="url">
-                    <figure className="image block">
-                      <Img fixed={featuredImgFixed} />
-                    </figure>
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div className="mt-6 mb-6">
-              <hr />
-            </div>
-          </article>
-        )
-      })}
-    </>
+            </article>
+          )
+        })}
+    </div>
   )
 }
 
@@ -81,7 +78,7 @@ const BlogPosts = ({ author, posts }) => {
     <section className="section">
       <div className="container">
         <div className="columns is-centered">
-          <div className="column is-8 mt-6">
+          <div className="column is-10 mt-6">
             {content}
           </div>
         </div>
