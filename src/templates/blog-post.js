@@ -43,7 +43,7 @@ const PostFeaturedImage = ({ post }) => {
   let featuredImageByline
   if (featuredImageCredit) {
     if (featuredImageLink) {
-      featuredImageByline = <a href={featuredImageLink} target="_blank" rel="noopener">{featuredImageCredit}</a>
+      featuredImageByline = <a href={featuredImageLink} target="_blank" rel="noopener noreferrer">{featuredImageCredit}</a>
     } else {
       featuredImageByline = featuredImageCredit
     }
