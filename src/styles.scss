@@ -88,6 +88,11 @@ body {
     background: $c-gray5;
     border-radius: 0;
     color: $c-black;
+
+    &::-moz-selection,
+    &::selection {
+      background: $c-gray4;
+    }
   }
 }
 
