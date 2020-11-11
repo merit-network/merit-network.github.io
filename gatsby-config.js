@@ -138,6 +138,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
+        implementation: require('sass'),
         rule: {
           include: /assets/
         }
