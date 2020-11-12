@@ -20,7 +20,7 @@ Sometimes when working with existing or legacy databases you might run into less
 
 Could be that when the database was created the database management system (DBMS) didn't support things like `AUTO_INCREMENT` (MySQL) or `IDENTITY` (Oracle Database 12+). It could also be that those responsible had good reason to manually manage things or maybe didn't know of a different way of doing things.
 
-**Let's say for reasons beyond this blog post that you cannot alter the existing datbases/tables.**
+**Let's say for reasons beyond this blog post that you cannot alter the existing databases/tables.**
 
 # Generating Django models
 
