@@ -218,4 +218,12 @@ class DepartmentTypeSerializer(ModelSerializer):
 
 # Closing thoughts
 
-**Whenever possible use primary keys and `AUTO_INCREMENT` or `IDENTITY`**. For the times you can't, hopefully something like `set_sql_for_field` can help!
+When starting fresh try to follow best practices for your DBMS and lean on the default mechanisms your DBMS provides for working with primary keys and IDs.
+
+In Oracle Database, that might be using `IDENTITY` which uses sequences under the hood but has additional features like one-per-table and sane defaults (more at <https://oracle-base.com/articles/12c/identity-columns-in-oracle-12cr1>). In other systems that might be `AUTO_INCREMENT`, `AUTOINCREMENT` or something comparable.
+
+There are absolutely times you may need to abandon auto-incrementing primary keys but if you get to that point you don't need us telling you how you should do things!
+
+For the times you can't start fresh or have had to get a bit more creative hopefully something like `set_sql_for_field` can help!
+
+Have a better way? Disagree? [Let us know](https://github.com/merit-network/merit-network.github.io/issues)!
