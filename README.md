@@ -18,6 +18,9 @@ npm run develop
 
 # (OPTIONAL) Clean local; helps if develop isn't "working"
 npm run clean
+
+# (OPTIONAL) Run a local build
+npm run build
 ```
 
 The site is now running at `http://localhost:8000`! Make changes locally, then push to your branch/fork and [open a PR](https://github.com/merit-network/merit-network.github.io/compare).
@@ -27,6 +30,10 @@ You can also browse GraphQL at `http://localhost:8000/__graphql`.
 # Deployment
 
 Deploys are handled automatically by GitHub Actions whenever a branch or PR is merged and visible at <https://merit-network.github.io/>. After a deploy runs, please allow a minute or two for GitHub Pages to catch up.
+
+# Upgrading
+
+Follow directions at [Upgrade for Minor or Patch Releases](https://www.gatsbyjs.com/docs/upgrade-gatsby-and-dependencies/) and test your updates locally by running `npm run develop` and `npm run build`.
 
 # Contributing
 

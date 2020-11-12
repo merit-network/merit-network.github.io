@@ -75,6 +75,46 @@ body {
   a {
     text-decoration: underline;
   }
+
+  > h1:not(:first-child) {
+    margin-top: 1.5em;
+  }
+
+  // Keep inline code sane
+  p > code[class*="language-"],
+  p > pre[class*="language-"],
+  p > strong > code[class*="language-"],
+  p > strong > pre[class*="language-"] {
+    background: $c-gray5;
+    border-radius: 0;
+    color: $c-black;
+
+    &::-moz-selection,
+    &::selection {
+      background: $c-gray4;
+    }
+  }
+}
+
+
+.gatsby-highlight {
+  &:not(:last-child) {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  // Fix for Bulma/Prism collision
+  .number {
+    background-color: inherit;
+    border-radius: 0;
+    color: inherit;
+    display: inline;
+    font-size: inherit;
+    height: auto;
+    margin: 0;
+    min-width: auto;
+    padding: 0;
+  }
 }
 
 
