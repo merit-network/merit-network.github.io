@@ -4,7 +4,9 @@ Open source and technology site for Merit Network, Inc.
 
 # Development
 
-Clone/fork the repo, then:
+_For detailed directions, please checkout out [DEVELOPMENT.md](DEVELOPMENT.md)._
+
+Assuming you're comfortable with Git and have Node/NPM installed, clone/fork the repo then:
 
 ```bash
 # Change into local copy
