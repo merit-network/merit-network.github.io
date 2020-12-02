@@ -19,6 +19,7 @@ module.exports = {
       linkedin: `merit-network`,
       twitter: `meritnetwork`,
     },
+    googleSiteVerification: `84vgr6j3VOMblKtNsVIIh0i6uPo1GQPuD0h4VZ362NU`,
   },
   plugins: [
     {
