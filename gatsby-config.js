@@ -158,10 +158,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-advanced-sitemap`,
       options: {
         createLinkInHead: true,
-        sitemapSize: 5000
+        addUncaughtPages: true,
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
