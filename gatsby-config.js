@@ -156,6 +156,13 @@ module.exports = {
         },
         extensions: ['js']
       }
+    },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        createLinkInHead: true,
+        addUncaughtPages: true,
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
