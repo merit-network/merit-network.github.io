@@ -25,7 +25,7 @@ npm run build
 
 ## Windows 10
 
-On Windows 10, we'll make use of GitHub Desktop to manage code and Ubuntu (app) to run our code via Node/NPM.
+On Windows 10, we'll make use of GitHub Desktop to manage code and Ubuntu (app) to run our code via Node/NPM. To copy/paste using the Ubuntu (app) see <https://www.howtogeek.com/353200/how-to-enable-copy-and-paste-keyboard-shortcuts-in-windows-10s-bash-shell/>.
 
 ### Windows 10: Setup
 
