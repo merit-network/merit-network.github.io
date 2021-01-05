@@ -60,10 +60,11 @@ One-time steps to get your Windows 10 environment setup.
 ### Windows 10: Edit, Run, Publish
 
 1. **Run code**
-    1. In Ubuntu (app), type/paste `cd /mnt/c/Users/<you>/Desktop`
+    1. In Ubuntu (app), type/paste `cd /mnt/c/Users/<you>/Desktop/merit-network.github.io`
         * If you aren't sure of your user name (folder) enter `cd /mnt/c/Users` and hit TAB to see choices.
         * If you cloned the code to a different location, you'll need to use a different path.
     1. Type/paste `npm run develop`
+        * Press CTRL+C to exit/stop.
     1. In a web browser, open <http://localhost:8000>
 1. **Edit code**
     1. In Windows Explorer, open Desktop > merit-network.github.io > content > blog
@@ -103,7 +104,7 @@ One-time steps to get your macOS 10/11 environment setup.
     1. Download and install <https://nodejs.org/dist/v14.15.1/node-v14.15.1.pkg>
     1. Install NPM/Node packages
         1. Open Applications > Terminal.app
-        1. Type/paste `cd /Users/<you>/Desktop`
+        1. Type/paste `cd /Users/<you>/Desktop/merit-network.github.io`
             * If you aren't sure of your user name (folder) enter `cd /Users` and hit TAB to see choices.
             * If you cloned the code to a different location, you'll need to use a different path.
         1. Type/paste `npm install`
@@ -111,10 +112,11 @@ One-time steps to get your macOS 10/11 environment setup.
 ### macOS 10/11: Edit, Run, Publish
 
 1. **Run code**
-    1. In Terminal, type/paste `cd /Users/<you>/Desktop`
+    1. In Terminal, type/paste `cd /Users/<you>/Desktop/merit-network.github.io`
         * If you aren't sure of your user name (folder) enter `cd /Users` and hit TAB to see choices.
         * If you cloned the code to a different location, you'll need to use a different path.
     1. Type/paste `npm run develop`
+        * Press CMD+C to exit/stop.
     1. In a web browser, open <http://localhost:8000>
 1. **Edit code**
     1. In Finder, open Desktop > merit-network.github.io > content > blog
