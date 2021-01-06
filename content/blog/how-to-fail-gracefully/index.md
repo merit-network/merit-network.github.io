@@ -16,7 +16,7 @@ If fail you must, then provide an accurate error message on the User Interface t
 
 # What the heck does it mean?
 
-"We are unable to perform this operation. We are sorry for the inconvenience, please check back later.'' When throwing your computer out the window isn't an option, what else can you do? Nothing.
+"We are unable to perform this operation. We are sorry for the inconvenience, please check back later.'' When throwing your computer out the window is not an option, what else can you do? Nothing.
 
 Most of the time we move on, just work through the thing, and try it a different way. Maybe an incognito window, maybe clear our cache, maybe restarting our computer? Not everybody has an automated way to debug an issue. If they did, then software companies everywhere would cease to exist.
 
