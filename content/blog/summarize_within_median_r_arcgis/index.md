@@ -1,5 +1,5 @@
 ---
-date: "2020-01-29T10:50:00Z"
+date: "2021-01-29T10:50:00Z"
 description: "Learn how to summarize the median value of your point features within a polygon feature class in ArcGIS Pro using the R-ArcGIS bridge."
 featuredImage: nathan-dumlao-qq9XjVZe4Lk-unsplash.jpg
 featuredImageCredit: "Nathan Dumlao"
