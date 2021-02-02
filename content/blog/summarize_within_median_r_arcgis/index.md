@@ -138,7 +138,7 @@ To finish, we need to merge these outputs together and write the data to an Esri
   Output_FC <- arc.write(summarized_output, new_poly_spdf)
 ```
 
-That's all the code! If you want to test this in RStudio before bringing it into ArcGIS Pro, simply comment out the initial function defintion and parameter defintions, define the parametrs as variables with the same name as the parameter defintion, and run the code from there. 
+That's all the code! If you want to test this in RStudio before bringing it into ArcGIS Pro, simply comment out the initial function definition and parameter definitions, define the parameters as variables with the same name as the parameter definition, and run the code from there. 
 
 For more information on creating a custom tool from your script in ArcGIS Pro, visit this site: https://pro.arcgis.com/en/pro-app/latest/arcpy/geoprocessing_and_python/adding-a-script-tool.htm
 
