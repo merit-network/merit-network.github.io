@@ -45,7 +45,7 @@ require(arcgisbinding) #initializes the R-ArcGIS bridge and connects your Esri l
 #tie your license into the session
 arc.check_product()
 ```
-Now we define the input and outputer parameters you want the user to provide via the tool interface in ArcGIS Pro:
+Now we define the input and output parameters you want the user to provide via the tool interface in ArcGIS Pro:
 
 ```r
   polygon_input <- in_params[(1)] #in this case, the census blocks
