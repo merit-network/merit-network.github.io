@@ -52,7 +52,7 @@ Now we define the input and outputer parameters you want the user to provide via
   point_input <- in_params[(2)] #in this case, the points with the speed test data
   attribute_input <- in_params[(3)] #this must be the EXACT name of the field in the data table
   attribute_groupby <- in_params[(4)] #this must be the EXACT name of the field in the data table
-  coord_system <- in_params[(5)] #user chooses Point or Polygon from dropdown for the coordinate system they wnat to use
+  coord_system <- in_params[(5)] #user chooses Point or Polygon from dropdown for the coordinate system they want to use
   
   summarized_output <- out_params[(1)] #this is user provided
   Output_FC <- out_params [(2)] #this is derived
