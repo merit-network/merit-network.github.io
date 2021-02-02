@@ -7,7 +7,7 @@ featuredImageLink: "https://unsplash.com/photos/qq9XjVZe4Lk"
 tags: ["gis", "R", "Esri", "ArcGIS Pro", "statistics"]
 title: Summarize Median Values in ArcGIS Pro via R-ArcGIS Bridge
 ---
-_If you've ever longed for 'median' as an option in the dropdown list of Esri's 'Summarize Within' tool when working with non-normally distributed data, long no more! Use this script and the R-ArcGIS Bridge to fulfill your non-parimetric function needs._
+_If you've ever longed for 'median' as an option in the dropdown list of Esri's 'Summarize Within' tool when working with non-normally distributed data, long no more! Use this script and the R-ArcGIS Bridge to fulfill your non-parametric function needs._
 
 # TL;DR
 When your data is not normally distributed, look outside the limited dropdown options for a solution that maintains the integrity of your data. The R-ArcGIS Bridge provides the ability to use R in scripting a statistical model (in this case calculating the median value based on geographic location) and ArcGIS Pro to run and incorporate the script into your larger Esri workflow. 
