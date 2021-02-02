@@ -119,7 +119,7 @@ Now we can finally get to the exciting part and do some stats! We're going to at
 We also will want the total number of points in each census block for a more robust understanding of our median metric:
 
 ```r
-  #count total amount of points within each polygoj based on ID supplied by user
+  #count total amount of points within each polygon based on ID supplied by user
   summarized_count <- aggregate(x=pts.poly@data[attribute_input], by=list(pts.poly@data[, attribute_groupby]), FUN=length, drop=TRUE)
   colnames(summarized_count)<-c(attribute_groupby,"Total Point Count")
   
