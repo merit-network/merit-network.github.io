@@ -145,6 +145,6 @@ For more information on creating a custom tool from your script in ArcGIS Pro, v
 #Closing thoughts
 At the end of the day it is so important to stay true to your data, even if that means stepping outside of the preconfigured dropdowns your software provides. Some of the time your data may be normally distributed and you can use ArcGIS Pro's 'Summarize Within' with no issues. In the cases where your data is non-parametric, doing a bit of extra work to seek out a non-parametic solution will maintain the integrity of your data and the R-ArcGIS Bridge makes this so much more doable.
 
-It is also worth noting that there are other way to deal with non-normally distibuted data, such as removing outliers or transforing your data, that may work better for your specific project. The most important rule of thumb is to always use your brain first about what works best for the intended use of that data.
+It is also worth noting that there are other way to deal with non-normally distributed data, such as removing outliers or transforming your data, that may work better for your specific project. The most important rule of thumb is to always use your brain first about what works best for the intended use of that data.
 
 Have a better way? Disagree? [Let us know](https://github.com/merit-network/merit-network.github.io/issues)!
