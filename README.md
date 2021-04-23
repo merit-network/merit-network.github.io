@@ -25,15 +25,13 @@ npm run clean
 npm run build
 ```
 
-The site is now running at `http://localhost:8000`! Make changes locally, then push to your branch/fork and [open a PR](https://github.com/merit-network/merit-network.github.io/compare).
+The site is now running at `http://localhost:8000`! You can also browse GraphQL at `http://localhost:8000/__graphql`.
 
-You can also browse GraphQL at `http://localhost:8000/__graphql`.
+Make changes locally, then push to your branch/fork and [open a PR](https://github.com/merit-network/merit-network.github.io/compare). When you open a PR a preview will be automatically created and shared as a PR comment.
 
 # Deployment
 
 Deploys are handled automatically by GitHub Actions whenever a branch or PR is merged and visible at <https://merit-network.github.io/>. After a deploy runs, please allow a minute or two for GitHub Pages to catch up.
-
-When you open a PR a preview will be automatically created and shared as a PR comment.
 
 # Upgrading
 
