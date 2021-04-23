@@ -33,6 +33,8 @@ You can also browse GraphQL at `http://localhost:8000/__graphql`.
 
 Deploys are handled automatically by GitHub Actions whenever a branch or PR is merged and visible at <https://merit-network.github.io/>. After a deploy runs, please allow a minute or two for GitHub Pages to catch up.
 
+When you open a PR a preview will be automatically created and shared in as a PR comment.
+
 # Upgrading
 
 Follow directions at [Upgrade for Minor or Patch Releases](https://www.gatsbyjs.com/docs/upgrade-gatsby-and-dependencies/) and test your updates locally by running `npm run develop` and `npm run build`.
