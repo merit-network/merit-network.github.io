@@ -1,5 +1,5 @@
 ---
-date: "2021-05-05T15:00:00Z"
+date: "2021-07-05T15:00:00Z"
 description: "Adding multi-database rollback support to pytest-django using fixtures that patch Django's test classes."
 featuredImage: "vincent-van-zalinge-4Mu2bXIsn5Y-unsplash.jpg"
 featuredImageCredit: "Vincent van Zalinge"
