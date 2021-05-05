@@ -81,6 +81,8 @@ body {
   }
 
   // Keep inline code sane
+  a > code[class*="language-"],
+  a > pre[class*="language-"],
   p > code[class*="language-"],
   p > pre[class*="language-"],
   p > strong > code[class*="language-"],
