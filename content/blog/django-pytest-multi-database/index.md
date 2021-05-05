@@ -64,7 +64,7 @@ This works by replacing the hard-coded default `DEFAULT_DB_ALIAS` with the datab
 
 # Other solutions and discussions
 
-There isn't yet a concesus on how best to do this and there isn't yet an official solution. What we're using is based on comments and direction from contributors to pytest-django but there's always more than one way to do things.
+There isn't yet a consensus on how best to do this and there isn't yet an official solution. What we're using is based on comments and direction from contributors to pytest-django but there's always more than one way to do things.
 
 For alternative solutions and more discussion:
 
