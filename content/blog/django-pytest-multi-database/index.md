@@ -8,6 +8,17 @@ tags: ["django", "database", "oracle", "oracle database", "pytest"]
 title: "Rollback Multiple Test Databases in Django with Pytest"
 ---
 
+# UPDATE: 2021-05-10
+
+**The pytest-django team is actively working on resolving this issue!** 🎉 Nearly the same day we put this up they started merging duplicate tickets and even have an initial PR!
+
+View/track progress at:
+
+* Issue: <https://github.com/pytest-dev/pytest-django/issues/924>
+* PR: <https://github.com/pytest-dev/pytest-django/pull/930>
+
+Until an official solution lands feel free to follow this article. Once there's an official solution we would _strongly_ encourage using it!
+
 # What's the problem?
 
 [Django](https://www.djangoproject.com/), [pytest](https://docs.pytest.org/), and [pytest-django](https://pytest-django.readthedocs.io/en/latest/) are awesome and work very well together when you have a single database and/or use a single, temporary test database that is created and destroyed every test run.
