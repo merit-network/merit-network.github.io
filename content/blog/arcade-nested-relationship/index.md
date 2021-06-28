@@ -20,9 +20,9 @@ Coming from a data science background where data frames provide the main means f
 I recently worked on a project with the following structure in an enterprise geodatabase with configured web services:
 
 - one point feature class (`splicecases`),
-- one line feature class (`fibercable`), 
-- one non-spatial table related to the line feature class (`fibers`), 
-- and one non-spatial table related to the point feature class (`fibersplice`). 
+- one line feature class (`fibercable`),
+- one non-spatial table related to the line feature class (`fibers`),
+- and one non-spatial table related to the point feature class (`fibersplice`).
 
 In non-database terms, the four tables describe a splice case location and the details of the fiber splicing within the fiber cables (e.g. at splice case location A, cable A contains fibers 1-12 which are spliced to fibers 6 - 24 in cable Z). We needed a pop-up on the `splicecases` to summarize data from the point, two intersecting lines, and potentially hundreds of rows each in the two non-spatial tables.
 
