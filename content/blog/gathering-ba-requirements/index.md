@@ -1,4 +1,7 @@
 ---
+date: "2022-03-21T21:19:58Z"
+featuredImage: scott-graham-5fNmWej4tAA-unsplash.jpg
+featuredImageCredit: "Scott Graham"
 description: "The thought process of a Business Analyst and how to navigate gathering requirements at any level."
 title: Gathering Business Analysis Requirement
 ---
