@@ -147,8 +147,8 @@ const PostsNav = ({ next, previous }) => {
 
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const author = data.site.siteMetadata?.author?.name
   const post = data.markdownRemark
+  const author = post.frontmatter.postAuthor || data.site.siteMetadata?.author?.name
   const { previous, next } = pageContext
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -210,6 +210,7 @@ export const pageQuery = graphql`
         featuredImageLink
         tags
         title
+        postAuthor
       }
     }
   }
