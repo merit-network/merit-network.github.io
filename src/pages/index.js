@@ -14,6 +14,9 @@ const IndexPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
+  console.log('inside indexpage')
+  console.log(data.site)
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
@@ -56,6 +59,7 @@ export const pageQuery = graphql`
           }
           tags
           title
+          postAuthor
         }
       }
     }
