@@ -6,6 +6,7 @@ featuredImageCredit: "Markus Spiske"
 featuredImageLink: "https://unsplash.com/photos/70Rir5vB96U"
 tags: ["first", "hello_world"]
 title: Hello World
+postAuthor: ""
 ---
 
 # Welcome to our first post on our open source and technology site! 🎉

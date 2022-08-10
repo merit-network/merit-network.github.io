@@ -17,6 +17,8 @@ const PostsList = ({ author, posts }) => {
     <div className="posts-list">
         {posts.map((post, index) => {
           const featuredImgFluid= post.frontmatter?.featuredImage?.childImageSharp?.fluid
+          // Use individual author if available, fallback to generic site author
+          const displayAuthor = post.frontmatter.postAuthor || author;
 
           return (
             <article
@@ -46,9 +48,9 @@ const PostsList = ({ author, posts }) => {
                 </h2>
                 <p className="is-size-7">
                   <em>
-                    {author &&
+                    {displayAuthor &&
                       <>
-                        By <Link to="/">{author}</Link> on {` `}
+                        By <Link to="/">{displayAuthor}</Link> on {` `}
                       </>
                     }
                     {post.frontmatter.date}
